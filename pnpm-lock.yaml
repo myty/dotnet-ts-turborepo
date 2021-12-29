@@ -4,47 +4,51 @@ importers:
 
   .:
     specifiers:
+      '@shelter/config': workspace:*
       eslint: 7.32.0
       prettier: ^2.5.1
       turbo: latest
     devDependencies:
+      '@shelter/config': link:packages/shelter-config
       eslint: 7.32.0
       prettier: 2.5.1
       turbo: 1.0.23
 
   apps/docs:
     specifiers:
+      '@shelter/config': workspace:*
+      '@shelter/tsconfig': workspace:*
+      '@shelter/ui': workspace:*
       '@types/react': ^17.0.37
       '@types/react-dom': ^17.0.11
-      config: workspace:*
       eslint: ^7.32.0
       next: latest
       next-transpile-modules: ^9.0.0
       react: ^17.0.2
       react-dom: ^17.0.2
-      tsconfig: workspace:*
       typescript: ^4.5.3
-      ui: workspace:*
     dependencies:
+      '@shelter/ui': link:../../packages/shelter-ui
       next: 12.0.7_react-dom@17.0.2+react@17.0.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      ui: link:../../packages/ui
     devDependencies:
+      '@shelter/config': link:../../packages/shelter-config
+      '@shelter/tsconfig': link:../../packages/shelter-tsconfig
       '@types/react': 17.0.38
       '@types/react-dom': 17.0.11
-      config: link:../../packages/config
       eslint: 7.32.0
       next-transpile-modules: 9.0.0
-      tsconfig: link:../../packages/tsconfig
       typescript: 4.5.4
 
   apps/web:
     specifiers:
+      '@shelter/config': workspace:*
+      '@shelter/tsconfig': workspace:*
+      '@shelter/ui': workspace:*
       '@types/react': ^17.0.37
       '@types/react-dom': ^17.0.11
       autoprefixer: ^10.4.0
-      config: workspace:*
       eslint: ^7.32.0
       next: latest
       next-transpile-modules: ^9.0.0
@@ -52,27 +56,25 @@ importers:
       react: ^17.0.2
       react-dom: ^17.0.2
       tailwindcss: ^3.0.7
-      tsconfig: workspace:*
       typescript: ^4.5.3
-      ui: workspace:*
     dependencies:
+      '@shelter/ui': link:../../packages/shelter-ui
       next: 12.0.7_react-dom@17.0.2+react@17.0.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      ui: link:../../packages/ui
     devDependencies:
+      '@shelter/config': link:../../packages/shelter-config
+      '@shelter/tsconfig': link:../../packages/shelter-tsconfig
       '@types/react': 17.0.38
       '@types/react-dom': 17.0.11
       autoprefixer: 10.4.0_postcss@8.4.5
-      config: link:../../packages/config
       eslint: 7.32.0
       next-transpile-modules: 9.0.0
       postcss: 8.4.5
       tailwindcss: 3.0.7_16a290f6d0e3717bf6d2667234aebd30
-      tsconfig: link:../../packages/tsconfig
       typescript: 4.5.4
 
-  packages/config:
+  packages/shelter-config:
     specifiers:
       '@types/tailwindcss': ^3.0.0
       eslint-config-next: ^12.0.7
@@ -85,32 +87,32 @@ importers:
       '@types/tailwindcss': 3.0.0
       typescript: 4.5.4
 
-  packages/tsconfig:
+  packages/shelter-tsconfig:
     specifiers: {}
 
-  packages/ui:
+  packages/shelter-ui:
     specifiers:
       '@headlessui/react': ^1.4.2
       '@heroicons/react': ^1.0.5
+      '@shelter/config': workspace:*
+      '@shelter/tsconfig': workspace:*
       '@types/react': ^17.0.37
       '@types/react-dom': ^17.0.11
       autoprefixer: ^10.4.0
-      config: workspace:*
       postcss: ^8.4.5
       tailwindcss: ^3.0.7
-      tsconfig: workspace:*
       typescript: ^4.5.2
     dependencies:
       '@headlessui/react': 1.4.2
       '@heroicons/react': 1.0.5
     devDependencies:
+      '@shelter/config': link:../shelter-config
+      '@shelter/tsconfig': link:../shelter-tsconfig
       '@types/react': 17.0.38
       '@types/react-dom': 17.0.11
       autoprefixer: 10.4.0_postcss@8.4.5
-      config: link:../config
       postcss: 8.4.5
       tailwindcss: 3.0.7_16a290f6d0e3717bf6d2667234aebd30
-      tsconfig: link:../tsconfig
       typescript: 4.5.4
 
 packages:

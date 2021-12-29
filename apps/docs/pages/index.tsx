@@ -1,4 +1,4 @@
-import { Button } from "ui";
+import { Button } from "../../../packages/shelter-ui/atoms/button";
 
 export default function Docs() {
   return (

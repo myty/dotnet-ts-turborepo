@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "@shelter/web",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -12,18 +12,18 @@
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "ui": "workspace:*"
+    "@shelter/ui": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "autoprefixer": "^10.4.0",
-    "config": "workspace:*",
+    "@shelter/config": "workspace:*",
     "eslint": "^7.32.0",
     "next-transpile-modules": "^9.0.0",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.7",
-    "tsconfig": "workspace:*",
+    "@shelter/tsconfig": "workspace:*",
     "typescript": "^4.5.3"
   }
 }

@@ -1,5 +1,5 @@
-import { Button, ButtonSize } from "ui/atoms/button";
-import { Card } from "ui/molecules/card";
+import { Button, ButtonSize } from "../../../packages/shelter-ui/atoms/button";
+import { Card } from "../../../packages/shelter-ui/molecules/card";
 
 export default function Web() {
   return (
