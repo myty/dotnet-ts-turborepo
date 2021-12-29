@@ -1,4 +1,7 @@
-const withTM = require("next-transpile-modules")(["@shelter/ui"]);
+const withTM = require("next-transpile-modules")([
+  "@shelter/data",
+  "@shelter/ui",
+]);
 
 module.exports = withTM({
   reactStrictMode: true,

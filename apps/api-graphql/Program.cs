@@ -11,7 +11,7 @@ builder.Services.AddRouting();
 builder.Services.AddScoped<IDocumentExecuter, DocumentExecuter>();
 builder.Services.AddScoped<IDocumentWriter, DocumentWriter>();
 builder.Services.AddGraphQL().AddSystemTextJson();
-builder.Services.AddSingleton<WeatherSchema>();
+builder.Services.AddSingleton<Schema>();
 
 
 if (builder.Environment.IsDevelopment())
@@ -44,7 +44,7 @@ else
 
 
 app.UseHttpsRedirection();
-app.UseGraphQL<WeatherSchema>();
+app.UseGraphQL<Schema>();
 
 
 app.Run();

@@ -1,0 +1,22 @@
+{
+  "name": "@shelter/data",
+  "version": "0.1.0",
+  "main": "./index.tsx",
+  "types": "./index.tsx",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint *.tsx"
+  },
+  "devDependencies": {
+    "@shelter/config": "workspace:*",
+    "@shelter/tsconfig": "workspace:*",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "graphql": "^16.2.0",
+    "graphql-request": "^3.7.0",
+    "react-query": "^3.34.7"
+  }
+}

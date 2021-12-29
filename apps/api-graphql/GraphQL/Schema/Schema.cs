@@ -2,11 +2,11 @@ using GraphQLSchema = GraphQL.Types.Schema;
 
 namespace Shelter.Api.GraphQL.GraphQL.Schema
 {
-    public class WeatherSchema : GraphQLSchema
+    public class Schema : GraphQLSchema
     {
-        public WeatherSchema()
+        public Schema()
         {
-            Query = new WeatherQuery();
+            Query = new Query();
         }
     }
 }
