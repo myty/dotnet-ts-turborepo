@@ -8,13 +8,13 @@
     "lint": "eslint *.tsx"
   },
   "devDependencies": {
+    "@shelter/config": "workspace:*",
+    "@shelter/tsconfig": "workspace:*",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "autoprefixer": "^10.4.0",
-    "@shelter/config": "workspace:*",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.7",
-    "@shelter/tsconfig": "workspace:*",
     "typescript": "^4.5.2"
   },
   "dependencies": {
