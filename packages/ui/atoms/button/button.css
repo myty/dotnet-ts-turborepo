@@ -1,0 +1,11 @@
+.btn {
+    @apply bg-blue-300 px-2 py-1.5 rounded focus:ring-2 focus:ring-offset-2
+}
+
+.btn-sm {
+    @apply bg-blue-300 px-2 py-1 rounded focus:ring-2 focus:ring-offset-2 text-sm
+}
+
+.btn-lg {
+    @apply bg-blue-300 px-2 py-1.5 rounded focus:ring-2 focus:ring-offset-2 text-lg
+}
