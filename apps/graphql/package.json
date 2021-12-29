@@ -1,0 +1,11 @@
+{
+    "name": "@shelter/api-graphql",
+    "private": true,
+    "version": "0.1.0",
+    "scripts": {
+      "clean": "dotnet clean",
+      "build": "dotnet build -c Release",
+      "dev": "dotnet watch run",
+      "test": "dotnet test"
+    }
+  }

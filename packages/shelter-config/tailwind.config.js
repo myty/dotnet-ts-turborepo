@@ -1,6 +1,6 @@
 module.exports = {
   content: [],
-  darkMode: false,
+  darkMode: "media",
   theme: {
     extend: {},
   },
