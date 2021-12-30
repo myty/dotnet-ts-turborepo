@@ -1,4 +1,4 @@
-# Kitchen-sink Turborepo starter
+# .NET and TypeScript Turborepo Starter
 
 This is a work in progress and is based on the official turborepo starter for PNPM.  It currently adds on a .NET GraphQL API as well as a Tailwind CSS based design system, but there is vision for more to come.
 
