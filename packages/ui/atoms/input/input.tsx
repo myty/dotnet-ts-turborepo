@@ -10,6 +10,7 @@ interface InputProps {
   label: string;
   placeholder?: string;
   type: HTMLInputTypeAttribute;
+  value?: string | number | readonly string[];
 }
 
 export const Input: React.FC<InputProps> = ({
@@ -19,33 +20,41 @@ export const Input: React.FC<InputProps> = ({
   label,
   placeholder,
   type,
+  value,
 }) => {
-  const id = useRef(`input-${uuidv4()}`).current;
-  const errorId = `${id}-error`;
+  const inputName = useRef(`input-${uuidv4()}`).current;
+  const errorId = `${inputName}-error`;
   const hasError = !!errorMessage;
   const inputClassName = `input__${hasError ? "error" : ""}`;
 
+  const inputProps: Partial<React.InputHTMLAttributes<HTMLInputElement>> = {
+    ["aria-invalid"]: hasError ? "true" : "false",
+  };
+
   return (
     <div className={className}>
-      <label htmlFor={id} className="block text-sm font-medium text-gray-700">
+      <label
+        className="block text-sm font-medium text-gray-700"
+        htmlFor={inputName}
+      >
         {label}
       </label>
-      <div className="mt-1 relative rounded-md shadow-sm">
+      <div className="relative mt-1 rounded-md shadow-sm">
         <input
-          type={type}
-          name={id}
-          id={id}
-          className={`block w-full pr-10 focus:outline-none sm:text-sm rounded-md ${inputClassName}`}
-          placeholder={placeholder}
-          defaultValue={defaultValue}
-          aria-invalid={hasError}
+          {...inputProps}
           aria-describedby={errorId}
+          className={`block w-full pr-10 focus:outline-none sm:text-sm rounded-md ${inputClassName}`}
+          defaultValue={defaultValue}
+          name={inputName}
+          placeholder={placeholder}
+          type={type}
+          value={value}
         />
         {hasError ? (
-          <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+          <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
             <ExclamationCircleIcon
-              className="h-5 w-5 text-red-500"
               aria-hidden="true"
+              className="w-5 h-5 text-red-500"
             />
           </div>
         ) : null}
