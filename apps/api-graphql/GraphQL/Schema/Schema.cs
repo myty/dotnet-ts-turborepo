@@ -1,6 +1,6 @@
 using GraphQLSchema = GraphQL.Types.Schema;
 
-namespace Shelter.Api.GraphQL.GraphQL.Schema
+namespace Monorepo.Api.GraphQL.GraphQL.Schema
 {
     public class Schema : GraphQLSchema
     {

@@ -1,9 +1,9 @@
 using GraphQL;
 using GraphQL.Relay.Types;
-using Shelter.Api.GraphQL.Data;
-using Shelter.Api.GraphQL.Models;
+using Monorepo.Api.GraphQL.Data;
+using Monorepo.Api.GraphQL.Models;
 
-namespace Shelter.Api.GraphQL.GraphQL.Types
+namespace Monorepo.Api.GraphQL.GraphQL.Types
 {
     public class WeatherForecastGraphType : NodeGraphType<WeatherForecast>
     {

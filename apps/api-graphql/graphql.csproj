@@ -4,8 +4,8 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <AssemblyName>Shelter.Api.GraphQL</AssemblyName>
-    <RootNamespace>Shelter.Api.GraphQL</RootNamespace>
+    <AssemblyName>Monorepo.Api.GraphQL</AssemblyName>
+    <RootNamespace>Monorepo.Api.GraphQL</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

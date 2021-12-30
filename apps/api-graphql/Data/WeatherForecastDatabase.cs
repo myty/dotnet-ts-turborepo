@@ -1,6 +1,6 @@
-using Shelter.Api.GraphQL.Models;
+using Monorepo.Api.GraphQL.Models;
 
-namespace Shelter.Api.GraphQL.Data
+namespace Monorepo.Api.GraphQL.Data
 {
     public static class WeatherForecastDatabase
     {

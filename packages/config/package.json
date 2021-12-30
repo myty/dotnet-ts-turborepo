@@ -1,5 +1,5 @@
 {
-  "name": "@shelter/config",
+  "name": "@monorepo/config",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",

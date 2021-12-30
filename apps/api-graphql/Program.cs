@@ -1,7 +1,7 @@
 using GraphQL;
 using GraphQL.Server;
 using GraphQL.SystemTextJson;
-using Shelter.Api.GraphQL.GraphQL.Schema;
+using Monorepo.Api.GraphQL.GraphQL.Schema;
 
 
 var builder = WebApplication.CreateBuilder(args);

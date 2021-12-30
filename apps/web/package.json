@@ -1,5 +1,5 @@
 {
-  "name": "@shelter/web",
+  "name": "@monorepo/web",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -9,17 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@shelter/api-graphql": "workspace:*",
-    "@shelter/data": "workspace:*",
-    "@shelter/ui": "workspace:*",
+    "@monorepo/api-graphql": "workspace:*",
+    "@monorepo/data": "workspace:*",
+    "@monorepo/ui": "workspace:*",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-query": "^3.34.7"
   },
   "devDependencies": {
-    "@shelter/config": "workspace:*",
-    "@shelter/tsconfig": "workspace:*",
+    "@monorepo/config": "workspace:*",
+    "@monorepo/tsconfig": "workspace:*",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "autoprefixer": "^10.4.0",

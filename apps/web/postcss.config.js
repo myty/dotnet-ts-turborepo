@@ -1,1 +1,1 @@
-module.exports = require("@shelter/config/postcss.config");
+module.exports = require("@monorepo/config/postcss.config");

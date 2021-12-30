@@ -1,1 +1,1 @@
-module.exports = require("@shelter/config/eslint-preset.js");
+module.exports = require("@monorepo/config/eslint-preset.js");

@@ -1,6 +1,6 @@
 {
-  "name": "shelter",
-  "version": "0.0.1",
+  "name": "monorepo",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -8,7 +8,7 @@
     "lint": "turbo run lint"
   },
   "devDependencies": {
-    "@shelter/config": "workspace:*",
+    "@monorepo/config": "workspace:*",
     "eslint": "7.32.0",
     "prettier": "^2.5.1",
     "turbo": "latest"

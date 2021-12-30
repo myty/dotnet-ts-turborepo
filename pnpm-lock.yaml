@@ -4,12 +4,12 @@ importers:
 
   .:
     specifiers:
-      '@shelter/config': workspace:*
+      '@monorepo/config': workspace:*
       eslint: 7.32.0
       prettier: ^2.5.1
       turbo: latest
     devDependencies:
-      '@shelter/config': link:packages/config
+      '@monorepo/config': link:packages/config
       eslint: 7.32.0
       prettier: 2.5.1
       turbo: 1.0.23
@@ -19,9 +19,9 @@ importers:
 
   apps/docs:
     specifiers:
-      '@shelter/config': workspace:*
-      '@shelter/tsconfig': workspace:*
-      '@shelter/ui': workspace:*
+      '@monorepo/config': workspace:*
+      '@monorepo/tsconfig': workspace:*
+      '@monorepo/ui': workspace:*
       '@types/react': ^17.0.38
       '@types/react-dom': ^17.0.11
       autoprefixer: ^10.4.0
@@ -34,13 +34,13 @@ importers:
       tailwindcss: ^3.0.8
       typescript: ^4.5.4
     dependencies:
-      '@shelter/ui': link:../../packages/ui
+      '@monorepo/ui': link:../../packages/ui
       next: 12.0.7_react-dom@17.0.2+react@17.0.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     devDependencies:
-      '@shelter/config': link:../../packages/config
-      '@shelter/tsconfig': link:../../packages/tsconfig
+      '@monorepo/config': link:../../packages/config
+      '@monorepo/tsconfig': link:../../packages/tsconfig
       '@types/react': 17.0.38
       '@types/react-dom': 17.0.11
       autoprefixer: 10.4.0_postcss@8.4.5
@@ -52,11 +52,11 @@ importers:
 
   apps/web:
     specifiers:
-      '@shelter/api-graphql': workspace:*
-      '@shelter/config': workspace:*
-      '@shelter/data': workspace:*
-      '@shelter/tsconfig': workspace:*
-      '@shelter/ui': workspace:*
+      '@monorepo/api-graphql': workspace:*
+      '@monorepo/config': workspace:*
+      '@monorepo/data': workspace:*
+      '@monorepo/tsconfig': workspace:*
+      '@monorepo/ui': workspace:*
       '@types/react': ^17.0.38
       '@types/react-dom': ^17.0.11
       autoprefixer: ^10.4.0
@@ -70,16 +70,16 @@ importers:
       tailwindcss: ^3.0.8
       typescript: ^4.5.4
     dependencies:
-      '@shelter/api-graphql': link:../api-graphql
-      '@shelter/data': link:../../packages/data
-      '@shelter/ui': link:../../packages/ui
+      '@monorepo/api-graphql': link:../api-graphql
+      '@monorepo/data': link:../../packages/data
+      '@monorepo/ui': link:../../packages/ui
       next: 12.0.7_react-dom@17.0.2+react@17.0.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-query: 3.34.7_react-dom@17.0.2+react@17.0.2
     devDependencies:
-      '@shelter/config': link:../../packages/config
-      '@shelter/tsconfig': link:../../packages/tsconfig
+      '@monorepo/config': link:../../packages/config
+      '@monorepo/tsconfig': link:../../packages/tsconfig
       '@types/react': 17.0.38
       '@types/react-dom': 17.0.11
       autoprefixer: 10.4.0_postcss@8.4.5
@@ -108,8 +108,8 @@ importers:
 
   packages/data:
     specifiers:
-      '@shelter/config': workspace:*
-      '@shelter/tsconfig': workspace:*
+      '@monorepo/config': workspace:*
+      '@monorepo/tsconfig': workspace:*
       '@types/react': ^17.0.37
       '@types/react-dom': ^17.0.11
       graphql: ^16.2.0
@@ -121,8 +121,8 @@ importers:
       graphql-request: 3.7.0_graphql@16.2.0
       react-query: 3.34.7
     devDependencies:
-      '@shelter/config': link:../config
-      '@shelter/tsconfig': link:../tsconfig
+      '@monorepo/config': link:../config
+      '@monorepo/tsconfig': link:../tsconfig
       '@types/react': 17.0.38
       '@types/react-dom': 17.0.11
       typescript: 4.5.4
@@ -134,8 +134,8 @@ importers:
     specifiers:
       '@headlessui/react': ^1.4.2
       '@heroicons/react': ^1.0.5
-      '@shelter/config': workspace:*
-      '@shelter/tsconfig': workspace:*
+      '@monorepo/config': workspace:*
+      '@monorepo/tsconfig': workspace:*
       '@types/react': ^17.0.37
       '@types/react-dom': ^17.0.11
       '@types/uuid': ^8.3.3
@@ -149,8 +149,8 @@ importers:
       '@heroicons/react': 1.0.5
       uuid: 8.3.2
     devDependencies:
-      '@shelter/config': link:../config
-      '@shelter/tsconfig': link:../tsconfig
+      '@monorepo/config': link:../config
+      '@monorepo/tsconfig': link:../tsconfig
       '@types/react': 17.0.38
       '@types/react-dom': 17.0.11
       '@types/uuid': 8.3.3

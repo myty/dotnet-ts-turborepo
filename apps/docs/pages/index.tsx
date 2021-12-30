@@ -1,4 +1,4 @@
-import { Input } from "@shelter/ui/atoms/input";
+import { Input } from "@monorepo/ui/atoms/input";
 
 export default function Docs() {
   return (

@@ -1,8 +1,8 @@
 using GraphQL.Relay.Types;
-using Shelter.Api.GraphQL.Data;
-using Shelter.Api.GraphQL.GraphQL.Types;
+using Monorepo.Api.GraphQL.Data;
+using Monorepo.Api.GraphQL.GraphQL.Types;
 
-namespace Shelter.Api.GraphQL.GraphQL.Schema
+namespace Monorepo.Api.GraphQL.GraphQL.Schema
 {
     public class Query : QueryGraphType
     {

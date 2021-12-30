@@ -1,6 +1,14 @@
-# Turborepo starter with PNPM
+# Kitchen-sink Turborepo starter
 
-This is an official starter turborepo.
+This is a work in progress and is based on the official turborepo starter for PNPM.  It currently adds on a .NET GraphQL API as well as a Tailwind CSS based design system, but there is vision for more to come.
+
+## Prerequisites
+
+Here are a few things that need to be installed before you can use this starter:
+
+- [Node.js](https://nodejs.org/en/) - current LTS version recommended
+- [PNPM](https://pnpm.js.org/)
+- [.NET](https://dotnet.microsoft.com/)
 
 ## What's inside?
 
@@ -8,13 +16,15 @@ This turborepo uses [PNPM](https://pnpm.io) as a packages manager. It includes t
 
 ### Apps and Packages
 
+- `api-graphql`: a [.NET](https://dotnet.microsoft.com/en-us/) based GraphQL API
 - `docs`: a [Next.js](https://nextjs.org) app
 - `web`: another [Next.js](https://nextjs.org) app
+- `data`: a data access API interraction TypeScript library layer shared by both `web` and `docs` applications
 - `ui`: a stub React component library shared by both `web` and `docs` applications
 - `config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Most packages/apps are [TypeScript](https://www.typescriptlang.org/) with the addition of the [.NET](https://dotnet.microsoft.com/en-us/) based GraphQL API utilizing [GraphQL.NET](https://graphql-dotnet.github.io/).  Other languages and stacks could be added in the future.
 
 ### Utilities
 
@@ -27,13 +37,13 @@ This turborepo has some additional tools already setup for you:
 
 ## Setup
 
-This repository is used in the `npx create-turbo@latest` command, and selected when choosing which package manager you wish to use with your monorepo (PNPM).
+This repository is used in the `pnpx create-turbo@latest` command, and selected when choosing which package manager you wish to use with your monorepo (PNPM).
 
 ### Build
 
 To build all apps and packages, run the following command:
 
-```
+```sh
 cd my-turborepo
 pnpm run build
 ```
@@ -42,7 +52,7 @@ pnpm run build
 
 To develop all apps and packages, run the following command:
 
-```
+```sh
 cd my-turborepo
 pnpm run dev
 ```
@@ -53,7 +63,7 @@ Turborepo can use a technique known as [Remote Caching (Beta)](https://turborepo
 
 By default, Turborepo will cache locally. To enable Remote Caching (Beta) you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
 
-```
+```sh
 cd my-turborepo
 npx turbo login
 ```
@@ -62,7 +72,7 @@ This will authenticate the Turborepo CLI with your [Vercel account](https://verc
 
 Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
 
-```
+```sh
 npx turbo link
 ```
 

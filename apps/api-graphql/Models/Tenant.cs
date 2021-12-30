@@ -1,4 +1,4 @@
-namespace Shelter.Api.GraphQL.Models
+namespace Monorepo.Api.GraphQL.Models
 {
     public record Tenant(
         Guid Id,

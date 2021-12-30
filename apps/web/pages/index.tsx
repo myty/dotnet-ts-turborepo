@@ -1,5 +1,5 @@
-import { ImageCard, ImageHeight } from "@shelter/ui/molecules/card";
-import { getTenantsData } from "@shelter/data";
+import { ImageCard, ImageHeight } from "@monorepo/ui/molecules/card";
+import { getTenantsData } from "@monorepo/data";
 import { useQuery } from "react-query";
 
 export default function Web() {

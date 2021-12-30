@@ -1,5 +1,5 @@
 {
-    "name": "@shelter/api-graphql",
+    "name": "@monorepo/api-graphql",
     "private": true,
     "version": "0.1.0",
     "scripts": {
