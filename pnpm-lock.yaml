@@ -57,10 +57,12 @@ importers:
       '@monorepo/data': workspace:*
       '@monorepo/tsconfig': workspace:*
       '@monorepo/ui': workspace:*
+      '@types/luxon': ^2.0.8
       '@types/react': ^17.0.38
       '@types/react-dom': ^17.0.11
       autoprefixer: ^10.4.0
       eslint: ^7.32.0
+      luxon: ^2.2.0
       next: latest
       next-transpile-modules: ^9.0.0
       postcss: ^8.4.5
@@ -73,6 +75,7 @@ importers:
       '@monorepo/api-graphql': link:../api-graphql
       '@monorepo/data': link:../../packages/data
       '@monorepo/ui': link:../../packages/ui
+      luxon: 2.2.0
       next: 12.0.7_react-dom@17.0.2+react@17.0.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -80,6 +83,7 @@ importers:
     devDependencies:
       '@monorepo/config': link:../../packages/config
       '@monorepo/tsconfig': link:../../packages/tsconfig
+      '@types/luxon': 2.0.8
       '@types/react': 17.0.38
       '@types/react-dom': 17.0.11
       autoprefixer: 10.4.0_postcss@8.4.5
@@ -490,6 +494,10 @@ packages:
   /@types/json5/0.0.29:
     resolution: {integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=}
     dev: false
+
+  /@types/luxon/2.0.8:
+    resolution: {integrity: sha512-lGmxL6hMEVqXr8w9bL52RUWXVu90o7vH8WQSutQssr2e+w0TNttXx2Zfw2V2lHHHWfW6OGqB8bXDvtKocv19qQ==}
+    dev: true
 
   /@types/node/17.0.5:
     resolution: {integrity: sha512-w3mrvNXLeDYV1GKTZorGJQivK6XLCoGwpnyJFbJVK/aTBQUxOCaa/GlFAAN3OTDFcb7h5tiFG+YXCO2By+riZw==}
@@ -2342,6 +2350,11 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
+
+  /luxon/2.2.0:
+    resolution: {integrity: sha512-LwmknessH4jVIseCsizUgveIHwlLv/RQZWC2uDSMfGJs7w8faPUi2JFxfyfMcTPrpNbChTem3Uz6IKRtn+LcIA==}
+    engines: {node: '>=12'}
+    dev: false
 
   /make-dir/3.1.0:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}

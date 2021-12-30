@@ -1,27 +1,42 @@
 import { ImageCard, ImageHeight } from "@monorepo/ui/molecules/card";
-import { getTenantsData } from "@monorepo/data";
+import { getAllForecasts, WeatherForecast } from "@monorepo/data";
 import { useQuery } from "react-query";
+import { DateTime } from "luxon";
+import { getImageUrl } from "../utils/weather-utils";
 
 export default function Web() {
-  const { data, isLoading } = useQuery("AllForecasts", getTenantsData);
+  const { data, isLoading } = useQuery("AllForecasts", getAllForecasts);
 
   return (
     <div className="m-8">
-      <h2 className="mt-8 text-xl font-bold">Tenants</h2>
+      <h2 className="mt-8 mb-2 text-xl font-bold">Forecasts</h2>
       <div className="flex flex-wrap gap-4 justify-left">
         {isLoading
           ? null
-          : data.map((tenant) => (
+          : data.map((weatherForecast) => (
               <ImageCard
-                key={tenant.id}
-                title={tenant.name}
+                key={weatherForecast.id}
+                title={formatDateTitle(weatherForecast)}
                 imageHeight={ImageHeight.Base}
-                imageUrl={tenant.imageUrl}
+                imageUrl={getImageUrl(weatherForecast)?.src}
               >
-                <p>{tenant.description}</p>
+                <div className="font-semibold">{weatherForecast.summary}</div>
+                <div className="text-sm font-light">
+                  {weatherForecast.temperatureC} Celcius
+                </div>
+                <div className="text-sm font-light">
+                  {weatherForecast.temperatureF} Fahrenheit
+                </div>
               </ImageCard>
             ))}
       </div>
     </div>
   );
+}
+
+function formatDateTitle({ date }: WeatherForecast): string {
+  return DateTime.fromISO(date).toLocaleString({
+    month: "long",
+    day: "numeric",
+  });
 }

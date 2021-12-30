@@ -2,10 +2,11 @@ import { request, gql } from "graphql-request";
 
 const endpoint = "https://localhost:7256/graphql";
 
-type WeatherForecast = {
+export type WeatherForecast = {
   id: string;
   summary: string;
   temperatureC: number;
+  temperatureF: number;
   date: string;
 };
 
@@ -20,6 +21,7 @@ export async function getAllForecasts(): Promise<Array<WeatherForecast>> {
               id
               summary
               temperatureC
+              temperatureF
               date
             }
           }
@@ -28,5 +30,5 @@ export async function getAllForecasts(): Promise<Array<WeatherForecast>> {
     `
   );
 
-  return weatherForecasts.edges.map((edge: any) => edge.node);
+  return (weatherForecasts?.edges ?? []).map((edge: any) => edge.node);
 }

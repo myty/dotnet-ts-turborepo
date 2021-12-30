@@ -19,16 +19,6 @@ namespace Monorepo.Api.GraphQL.GraphQL.Schema
                             ctx
                         )
                 );
-
-            Connection<TenantGraphType>()
-                .Name("tenants")
-                .Resolve(
-                    ctx =>
-                        ConnectionUtils.ToConnection(
-                            TentantDatabase.GetTenants(),
-                            ctx
-                        )
-                );
         }
     }
 }

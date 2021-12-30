@@ -9,16 +9,16 @@ namespace Monorepo.Api.GraphQL.Data
                 () =>
                     new List<string>
                     {
-                        "Freezing",
+                        "Balmy",
                         "Bracing",
                         "Chilly",
                         "Cool",
-                        "Mild",
-                        "Warm",
-                        "Balmy",
+                        "Freezing",
                         "Hot",
+                        "Mild",
+                        "Scorching",
                         "Sweltering",
-                        "Scorching"
+                        "Warm",
                     }
             );
 
