@@ -1,10 +1,20 @@
-import { Button } from "@shelter/ui/atoms/button";
+import { Input } from "@shelter/ui/atoms/input";
 
 export default function Docs() {
   return (
-    <div>
+    <div className="prose m-8">
       <h1>Docs</h1>
-      <Button text="Docs Button" />
+
+      <h2>Inputs</h2>
+
+      <h3>Errored Input</h3>
+      <Input
+        className="w-max-sm"
+        label="Label"
+        type="text"
+        placeholder="Placeholder"
+        errorMessage="This is a validation error message"
+      />
     </div>
   );
 }
