@@ -9,16 +9,16 @@ namespace Monorepo.Api.GraphQL.Data
                 () =>
                     new List<string>
                     {
-                        "Balmy",
+                        "Freezing",
                         "Bracing",
                         "Chilly",
                         "Cool",
-                        "Freezing",
-                        "Hot",
                         "Mild",
-                        "Scorching",
-                        "Sweltering",
                         "Warm",
+                        "Balmy",
+                        "Hot",
+                        "Sweltering",
+                        "Scorching"
                     }
             );
 
@@ -29,12 +29,19 @@ namespace Monorepo.Api.GraphQL.Data
                         .Range(1, 16)
                         .Select(
                             index =>
-                                new WeatherForecast(
+                            {
+                                var tempC = Random.Shared.Next(-20, 55);
+                                var tempF = 32 + (int)(tempC / 0.5556);
+                                var summary = _summaries.Value[CalculateSummaryIndex(tempC)];
+
+                                return new WeatherForecast(
                                     Id: index + 1,
                                     Date: DateTime.Now.AddDays(index),
-                                    TemperatureC: Random.Shared.Next(-20, 55),
-                                    Summary: _summaries.Value[Random.Shared.Next(_summaries.Value.Count)]
-                                )
+                                    TemperatureC: tempC,
+                                    TemperatureF: tempF,
+                                    Summary: summary
+                                );
+                            }
                         )
                         .ToList()
             );
@@ -43,5 +50,15 @@ namespace Monorepo.Api.GraphQL.Data
 
         public static WeatherForecast? GetById(string id) =>
             _forecasts.Value.FirstOrDefault(t => t.Id == long.Parse(id));
+
+        private static int CalculateSummaryIndex(int tempC)
+        {
+            return Convert.ToInt32(
+                Math.Round(
+                    (Convert.ToDecimal(tempC) + 20m) / 75m
+                        * Convert.ToDecimal(_summaries.Value.Count)
+                )
+            );
+        }
     }
 }

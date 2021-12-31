@@ -29,6 +29,11 @@
       },
       "dev": {
         "cache": false
+      },
+      "@monorepo/api-graphql#build": {
+        "outputs": [
+          "Release/**"
+        ]
       }
     }
   }
