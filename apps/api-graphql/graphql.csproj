@@ -9,9 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GraphQL" Version="4.7.0" />
+    <PackageReference Include="GraphQL" Version="4.7.1" />
     <PackageReference Include="GraphQL.Relay" Version="0.6.2" />
-    <PackageReference Include="GraphQL.Server.Transports.AspNetCore.SystemTextJson" Version="5.1.1" />
+    <PackageReference Include="GraphQL.Server.Transports.AspNetCore.SystemTextJson" Version="5.2.0" />
   </ItemGroup>
 
 </Project>
